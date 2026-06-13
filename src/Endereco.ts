@@ -1,4 +1,4 @@
-class Endereco {
+export class Endereco {
     private cep: string;
     private logradouro: string;
     private bairro: string;
