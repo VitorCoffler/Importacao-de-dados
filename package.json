@@ -1,0 +1,24 @@
+{
+  "name": "importa-o-de-dados",
+  "version": "1.0.0",
+  "description": "Projeto em TypeScript utilizando programação assíncrona para consumir APIs externas (ReceitaWS e ViaCEP). O sistema consulta dados de 7 empresas via CNPJ, busca endereços pelo CEP, cria objetos orientados a objetos, armazena em memória e realiza tratamento de erros com Promise, Async/Await, Resolve e Reject.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitorCoffler/Importa-o-de-dados.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/VitorCoffler/Importa-o-de-dados/issues"
+  },
+  "homepage": "https://github.com/VitorCoffler/Importa-o-de-dados#readme",
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}
