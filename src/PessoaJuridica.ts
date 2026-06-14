@@ -1,4 +1,5 @@
 import { Endereco } from "./Endereco";
+
 export class PessoaJuridica {
     private cnpj: string;
     private razaoSocial: string;
