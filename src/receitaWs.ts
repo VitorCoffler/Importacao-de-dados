@@ -16,12 +16,11 @@ export async function fetchCNPJ(_cnpj: string): Promise<PessoaJuridica> {
             const responseJSON = await response.json();
             const endereco: Endereco = await fetchCEP(responseJSON.cep.replace(/\D/g, ""));
             const obj: PessoaJuridica = new PessoaJuridica(responseJSON.cnpj,
-                responseJSON.fantasia,
+                responseJSON.fantasia || responseJSON.nome,
                 responseJSON.email,
                 responseJSON.telefone,
                 endereco);
-
-            return obj;
+                return obj;
         }
         else {
             throw new Error("CPNJ não encontrado!");

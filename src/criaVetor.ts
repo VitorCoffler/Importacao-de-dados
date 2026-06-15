@@ -13,19 +13,18 @@ function delay(ms: number) {
 const repositorio = new RepositorioPessoaJuridica();
 
 export async function criarVetorPessoaJuridica(_vetor: Array<string>): Promise<Array<PessoaJuridica>> {
-
-     console.log("Iniciando a requisição\n");
+    console.log("Iniciando a requisição\n");
 
     for (let i = 0; i < _vetor.length; i++) {
-        const cpnj = _vetor[i];
+        const cnpj = _vetor[i];
 
         try {
-
+            
             if (i > 0 && i % 2 == 0) {
-                await delay(21000);
+                await delay(21000); // Primeiro delay (condicional)
             }
 
-            const resultadoEmpresa: PessoaJuridica = await fetchCNPJ(cpnj!);
+            const resultadoEmpresa: PessoaJuridica = await fetchCNPJ(cnpj!);
 
             repositorio.adicionar(resultadoEmpresa);
 
@@ -37,11 +36,11 @@ export async function criarVetorPessoaJuridica(_vetor: Array<string>): Promise<A
             console.log(error.message);
         }
 
-        await delay(21000);
+        await delay(23000);
 
     }
 
-    console.log(" - - - - - - listagem de pessoa jurídica - - - - - - ");
+    console.log("listagem de pessoa jurídica");
 
     return repositorio.listar();
 }

@@ -12,7 +12,7 @@ const listaCNPJ: string[] = [
 
 async function mostrarResultado() {
     const vetPessoaJuridica = await criarVetorPessoaJuridica(listaCNPJ);
-    console.log("\n - - - - - - Método toString() - - - - - -\n")
+    console.log("\n  Método toString() \n")
     vetPessoaJuridica.forEach(objeto => {
         console.log(objeto.toString());
     });
