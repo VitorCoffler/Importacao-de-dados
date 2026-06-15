@@ -9,7 +9,7 @@ export async function fetchCNPJ(_cnpj: string): Promise<PessoaJuridica> {
         const response = await fetch(`https://receitaws.com.br/v1/cnpj/${cnpj}`);
         
         if (response.status == 429) {
-            throw new Error("A API não suporta consultas!");
+            throw new Error("Limite de requisições excedido na ReceitaWS (máx 3 por minuto).");
         }
 
         if (response.ok) {

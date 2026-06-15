@@ -21,7 +21,7 @@ export async function criarVetorPessoaJuridica(_vetor: Array<string>): Promise<A
         try {
             
             if (i > 0 && i % 2 == 0) {
-                await delay(21000); // Primeiro delay (condicional)
+                await delay(23000); // Primeiro delay (condicional)
             }
 
             const resultadoEmpresa: PessoaJuridica = await fetchCNPJ(cnpj!);
