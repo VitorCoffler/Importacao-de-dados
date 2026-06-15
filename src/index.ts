@@ -1,5 +1,4 @@
 import { criarVetorPessoaJuridica } from "./criaVetor";
-import { fetchCEP } from "./fethCEP";
 
 const listaCNPJ: string[] = [
         "47960950000121", // MAGAZINE LUIZA - SP
