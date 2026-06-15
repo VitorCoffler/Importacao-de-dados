@@ -3,15 +3,11 @@ import { Endereco } from "./Endereco";
 import { verificaCnpj } from "./validacoes";
 import { fetchCEP } from "./fethCEP";
 
-
 export async function fetchCNPJ(_cnpj: string): Promise<PessoaJuridica> {
     try {
-
         const cnpj = verificaCnpj(_cnpj);
-
         const response = await fetch(`https://receitaws.com.br/v1/cnpj/${cnpj}`);
-
-
+        
         if (response.status == 429) {
             throw new Error("A API não suporta consultas!");
         }
@@ -26,7 +22,6 @@ export async function fetchCNPJ(_cnpj: string): Promise<PessoaJuridica> {
                 endereco);
 
             return obj;
-
         }
         else {
             throw new Error("CPNJ não encontrado!");
